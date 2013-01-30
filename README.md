@@ -36,6 +36,12 @@ to produce:
 <input id="calendar_parent_id" name="calendar[parent_id]" type="hidden" value="6" /><div class="btn-group"><a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="combo_box_text">Child 1</span> <i class="icon-caret-down"></i></a><ul class="dropdown-menu" data-for="calendar_parent_id"><li class=""><a href="#" class="combo_box_item">(None)</a></li><li class=""><a href="#" class="combo_box_item" data-value="5">Root</a></li><li class="active"><a href="#" class="combo_box_item" data-value="6"><i class="icon-angle-right"></i>Child 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="8"><i class="icon-angle-right"></i><i class="icon-angle-right"></i>SubChild 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="9"><i class="icon-angle-right"></i><i class="icon-angle-right"></i>SubChild 2</a></li><li class=""><a href="#" class="combo_box_item" data-value="7"><i class="icon-angle-right"></i>Child 2</a></li></ul></div>
 ~~~
 
+which render like this:
+
+![combo-closed](http://img11.hostingpics.net/pics/892421comboboxclosed.png)
+
+![combo-opened](http://img11.hostingpics.net/pics/781716comboboxopened.png)
+
 ## Contributing
 
 1. Fork it
