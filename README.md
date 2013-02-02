@@ -6,7 +6,7 @@ Advanced combo-box using Twitter-Bootstrap
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter_bootstrap_combo', :git => "git://github.com/smortex/twitter_bootstrap_combo.git"
+    gem 'twitter_bootstrap_combo'
 
 And then execute:
 
