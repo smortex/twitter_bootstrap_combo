@@ -27,13 +27,13 @@ Add this line to `app/assets/javascripts/application.js`:
 Then in your views, use:
 
 ~~~erb
-<%= combo_box(:calendar, :parent_id, Calendar.all.collect { |c| [ (content_tag(:i, "", :class => "icon-angle-right") * c.level + c.name).html_safe, c.id ] }, :include_blank => true) %>
+<%= combo_box(:calendar, :parent_id, Calendar.all.collect { |c| [ (content_tag(:i, "", :class => "fa fa-angle-right fa-fw") * c.level + c.name).html_safe, c.id ] }, :include_blank => true) %>
 ~~~
 
 to produce:
 
 ~~~html
-<input id="calendar_parent_id" name="calendar[parent_id]" type="hidden" value="6" /><div class="btn-group"><a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="combo_box_text">Child 1</span> <i class="icon-caret-down"></i></a><ul class="dropdown-menu" data-for="calendar_parent_id"><li class=""><a href="#" class="combo_box_item">(None)</a></li><li class=""><a href="#" class="combo_box_item" data-value="5">Root</a></li><li class="active"><a href="#" class="combo_box_item" data-value="6"><i class="icon-angle-right"></i>Child 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="8"><i class="icon-angle-right"></i><i class="icon-angle-right"></i>SubChild 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="9"><i class="icon-angle-right"></i><i class="icon-angle-right"></i>SubChild 2</a></li><li class=""><a href="#" class="combo_box_item" data-value="7"><i class="icon-angle-right"></i>Child 2</a></li></ul></div>
+<input id="calendar_parent_id" name="calendar[parent_id]" type="hidden" value="6" /><div class="btn-group"><a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="combo_box_text">Child 1</span> <i class="fa fa-caret-down"></i></a><ul class="dropdown-menu" data-for="calendar_parent_id"><li class=""><a href="#" class="combo_box_item">(None)</a></li><li class=""><a href="#" class="combo_box_item" data-value="5">Root</a></li><li class="active"><a href="#" class="combo_box_item" data-value="6"><i class="fa fa-angle-right fa-fw"></i>Child 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="8"><i class="fa fa-angle-right fa-fw"></i><i class="fa fa-angle-right fa-fw"></i>SubChild 1</a></li><li class=""><a href="#" class="combo_box_item" data-value="9"><i class="fa fa-angle-right fa-fw"></i><i class="fa fa-angle-right fa-fw"></i>SubChild 2</a></li><li class=""><a href="#" class="combo_box_item" data-value="7"><i class="fa fa-angle-right fa-fw"></i>Child 2</a></li></ul></div>
 ~~~
 
 which render like this:
