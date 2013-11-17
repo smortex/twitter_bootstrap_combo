@@ -68,7 +68,7 @@ module TwitterBootstrapCombo
 
       hidden_field(object, method) +
       content_tag(:div, :class => "btn-group") do
-        link_to(content_tag(:span, strip_tags(current_text), :class => "combo_box_text") + " " + content_tag(:i, "", :class => "fa fa-caret-down"), "#", :class => "btn dropdown-toggle", :data => { :toggle => "dropdown" }) +
+        link_to(content_tag(:span, strip_tags(current_text), :class => "combo_box_text") + " " + content_tag(:i, "", :class => "fa fa-caret-down"), "#", :class => "btn btn-default dropdown-toggle", :data => { :toggle => "dropdown" }) +
         content_tag(:ul, :class => "dropdown-menu", :data => { :for => "#{object}_#{method}" }) do
           if options[:include_blank] then
             css_class = []
