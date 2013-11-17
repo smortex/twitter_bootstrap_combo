@@ -77,7 +77,7 @@ module TwitterBootstrapCombo
             end
             content_tag(:li, :class => css_class.join(" ")) do
               link_to("(None)", '#', :class => "combo_box_item")
-            end
+            end + content_tag(:li, "", :class => "divider")
           else
             "".html_safe
           end +
