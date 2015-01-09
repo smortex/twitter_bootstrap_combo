@@ -51,7 +51,7 @@ module TwitterBootstrapCombo
     #
     #   container(:event, :calendar_id, options_from_collection_for_combo_box(Calendar.all, :id, :name, @event.calendar_id), :include_blank => true)
     def combo_box(object, method, choices, options = {}, html_options = {})
-      current_value = self.instance_variable_get("@#{object}").instance_variable_get("@attributes")[method.to_s].to_i
+      current_value = self.instance_variable_get("@#{object}").instance_variable_get("@attributes")[method.to_s].value
 
       current_text = "(None)"
       if Array === choices then
