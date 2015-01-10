@@ -72,7 +72,7 @@ module TwitterBootstrapCombo
         content_tag(:ul, :class => "dropdown-menu", :data => { :for => "#{object}_#{method}" }) do
           if options[:include_blank] then
             css_class = []
-            if current_value == 0 then
+            if current_value == nil then
               css_class << "active"
             end
             content_tag(:li, :class => css_class.join(" ")) do
