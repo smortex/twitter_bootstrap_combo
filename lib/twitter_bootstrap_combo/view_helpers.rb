@@ -7,15 +7,17 @@ module TwitterBootstrapCombo
 
       container.map do |element|
         if Array === element then
-          text, value = element
+          text, value, options = element
         else
           text, value = element, element
         end
-        css_class = []
+        options ||= {}
+        options[:class] ||= ''
         if selected == value then
-          css_class << "active"
+          options[:class] += ' active'
         end
-        content_tag(:li, :class => css_class.join(" ")) do
+        options.reject! { |k,v| v.empty? }
+        content_tag(:li, options) do
           link_to(text, '#', :class => "combo_box_item", :data => { :value => value })
         end
       end.join().html_safe
